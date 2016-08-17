@@ -1,0 +1,37 @@
+{
+  "title": "SlackFiles",
+  "copyright": "",
+  "version": "1.0.0",
+  "description": "A bulk file downloader and deleter for Slack",
+  "authors": [ "Ryan Crosby" ],
+  "packOptions": {
+    "tags": [ "" ],
+    "projectUrl": "https://github.com/crozone/SlackFiles",
+    "licenseUrl": "https://opensource.org/licenses/MIT"
+  },
+
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "FormatWith": "1.4.1",
+    "Microsoft.Extensions.Configuration": "1.0.0",
+    "Microsoft.Extensions.Configuration.Binder": "1.0.0",
+    "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0"
+    },
+    "Newtonsoft.Json": "9.0.1"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  }
+}
