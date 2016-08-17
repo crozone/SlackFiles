@@ -34,7 +34,7 @@ namespace SlackFiles {
                 .Build();
 
             AppSettings settings = new AppSettings();
-            config.GetSection(nameof(AppSettings)).Bind(settings);
+            config.Bind(settings);
 
             MainApp app = new MainApp(settings);
             await app.Run();

@@ -20,7 +20,7 @@ namespace SlackFiles {
         public async Task Run() {
             HttpClient httpClient = new HttpClient();
             // set auth header
-            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", settings.ApiKey);
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", settings.AuthToken);
 
             Console.WriteLine("Getting channel list...");
             var channels = await GetChannelList(httpClient);
@@ -72,7 +72,7 @@ namespace SlackFiles {
 
             // set up the content that will be posted as form parameters
             HttpContent content = new FormUrlEncodedContent(new Dictionary<string, string>() {
-                ["token"] = settings.ApiKey,
+                ["token"] = settings.AuthToken,
                 ["file"] = file.Id
             });
 
@@ -149,7 +149,7 @@ namespace SlackFiles {
 
             // set up the content that will be posted as form parameters
             HttpContent content = new FormUrlEncodedContent(new Dictionary<string, string>() {
-                ["token"] = settings.ApiKey
+                ["token"] = settings.AuthToken
             });
 
             // Post the request to the api, and get the response
@@ -182,7 +182,7 @@ namespace SlackFiles {
                 Console.WriteLine($"Getting files list page {currentPage}");
                 // set up the content that will be posted as form parameters
                 HttpContent content = new FormUrlEncodedContent(new Dictionary<string, string>() {
-                    ["token"] = settings.ApiKey,
+                    ["token"] = settings.AuthToken,
                     ["page"] = currentPage.ToString()//,
                     //["count"] = "999" // this appears to be the largest amount of files we can grab per page
                 });
