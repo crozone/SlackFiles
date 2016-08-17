@@ -1,7 +1,6 @@
 {
   "title": "SlackFiles",
   "copyright": "",
-  "version": "1.0.0",
   "description": "A bulk file downloader and deleter for Slack",
   "authors": [ "Ryan Crosby" ],
   "packOptions": {
